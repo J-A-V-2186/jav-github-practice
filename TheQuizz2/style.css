@@ -6,10 +6,18 @@
   color: white;
   font-family: "Roboto", sans-serif;
 }
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+::selection{
+    background-color: white;
+    color:black;
+}
 body {
   background-color: black;
 }
-main {
+#main {
   display: flex;
   padding: 24px;
   height: 100vh;
@@ -22,7 +30,7 @@ main {
 }
 .header {
   display: flex;
-  padding: 100px 0;
+  margin: 100px 0;
   text-align: start;
   height: 50%;
   font-size: 5em;
@@ -37,6 +45,7 @@ main {
 }
 .para__description {
   width: 50%;
+  margin-right:24px;
 }
 .starterButton {
   display: flex;
@@ -49,7 +58,7 @@ button {
   border: none;
   color: black;
   border-radius: 10px;
-  height: 50px;
+  height: 5vh;
   width: 100%;
   max-width: 300px;
   transition: all 1s ease;
@@ -60,4 +69,41 @@ button:hover {
 }
 button:active {
   transform: scale(0.95);
+}
+
+@media(max-width:576px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header{
+        display: flex;
+        width: 100%;
+        font-size: 10vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+    }
+    .para{
+        display: flex;
+        height:50%;
+        font-size: 6vw;
+        flex-direction: column;
+        margin-top:100px;
+
+    }
+    .para__description{
+        width: 100%;
+    }
+    .starterButton{
+        display: flex;
+        align-items: start;
+        width: 100%;
+    }
+    .starterButton{
+        margin-top: 24px;
+    }
+
 }
