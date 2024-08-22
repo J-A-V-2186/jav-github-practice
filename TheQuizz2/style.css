@@ -7,31 +7,40 @@
   font-family: "Roboto", sans-serif;
 }
 .fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-::selection{
-    background-color: white;
-    color:black;
+::selection {
+  background-color: white;
+  color: black;
 }
+/* CSS for the initial hidden state and fade-in effect */
 body {
   background-color: black;
 }
-#main {
+.row.visible {
+    opacity: 1;
+}
+.main {
   display: flex;
   padding: 24px;
   height: 100vh;
+
 }
 .row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+
 }
 .header {
   display: flex;
   margin: 100px 0;
   text-align: start;
+  align-items: center;
   height: 50%;
   font-size: 5em;
 }
@@ -45,7 +54,7 @@ body {
 }
 .para__description {
   width: 50%;
-  margin-right:24px;
+  margin-right: 24px;
 }
 .starterButton {
   display: flex;
@@ -61,49 +70,46 @@ button {
   height: 5vh;
   width: 100%;
   max-width: 300px;
-  transition: all 1s ease;
+  transition: all 300ms ease;
 }
 button:hover {
   background-color: red;
   color: white;
+  transform: scale(1.05);
 }
 button:active {
-  transform: scale(0.95);
+  transform: scale(1);
 }
 
-@media(max-width:576px){
-    .row{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .header{
-        display: flex;
-        width: 100%;
-        font-size: 10vw;
-        justify-content: center;
-        align-items: center;
-        margin-top: 100px;
-
-    }
-    .para{
-        display: flex;
-        height:50%;
-        font-size: 6vw;
-        flex-direction: column;
-        margin-top:100px;
-
-    }
-    .para__description{
-        width: 100%;
-    }
-    .starterButton{
-        display: flex;
-        align-items: start;
-        width: 100%;
-    }
-    .starterButton{
-        margin-top: 24px;
-    }
-
+@media (max-width: 576px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    display: flex;
+    width: 100%;
+    font-size: 10vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .para {
+    display: flex;
+    height: 50%;
+    font-size: 6vw;
+    flex-direction: column;
+  }
+  .para__description {
+    width: 100%;
+  }
+  .starterButton {
+    display: flex;
+    align-items: start;
+    width: 100%;
+  }
+  .starterButton {
+    margin-top: 24px;
+  }
 }
