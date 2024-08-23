@@ -1,4 +1,4 @@
-fetch('https://api.example.com/data')
+fetch('/users.json')
   .then(response => response.json()) // Converts the response to JSON (a format for data)
   .then(data => {
     console.log(data); // Do something with the data, like display it
