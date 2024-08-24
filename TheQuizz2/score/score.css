@@ -6,31 +6,35 @@
   font-family: "Roboto", sans-serif;
   color: white;
 }
-body{
-    background-color: black;
+::selection {
+  background-color: white;
+  color: black;
 }
-main{
-    margin: 24px;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-
+body {
+  background-color: black;
 }
-.visible{
-    opacity: 1;
-    transition: opacity 1s ease-out;
+main {
+  margin: 24px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
 }
-section{
-    margin-bottom: 100px;
-    width: 100%;
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out;
 }
-.div__grade{
-    border: white dashed 1px;
+section {
+  margin-bottom: 100px;
+  width: 100%;
 }
-h1{
-    font-size: 8em;
+h1 {
+  font-size: 8em;
 }
-h2{
-    font-size: 3em;
+h2 {
+  font-size: 3em;
 }
-
+.grade__section {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3em;
+}
