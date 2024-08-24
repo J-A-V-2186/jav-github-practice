@@ -23,14 +23,17 @@ function grabData() {
   console.log("Collected Answers:", ans);
 
   let score = 0;
-  for (let i = 1; i <= q.length; i++) {
+  for (let i = 0; i < q.length; i++) {
     if (ans[i] == correctAns[i]) {
       score++;
     }
   }
+  console.log(score);
+  // Store the score in localStorage
+  localStorage.setItem("quizScore", score);
 }
 
-// Example of triggering `grabData` on form submission
+//Example of triggering `grabData` on form submission
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
   grabData();
@@ -39,6 +42,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
   mainContent.classList.add("fade-out");
 
   setTimeout(function () {
-    window.location.href = "/TheQuizz2/score/score.html"
+    window.location.href = "/TheQuizz2/score/score.html";
   }, 500);
 });
